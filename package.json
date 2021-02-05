@@ -43,13 +43,9 @@
     "webpack-cli": "^2.0.10",
     "webpack-dev-server": "~3.1.0"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "devDependencies": {
-    "gh-pages": "^2.2.0"
-  }
+    "scripts": {
+    "dev": "node server.js",
+    "test": "mocha test -u bdd -R spec",
+    "build": "webpack -p --config ./webpack.production.config.js"
+    }
 }
